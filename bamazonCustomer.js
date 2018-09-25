@@ -26,13 +26,16 @@ const displayInventory = () => {
     console.log(
       "........................................................................\n"
     );
-    for (let i = 0; i < queryResp.length; i++) {
+    queryResp.forEach(element => {
       console.log(
-        `Item ID: ${queryResp[i].id} || Product Name: ${
-          queryResp[i].product_name
-        } || Price: ${queryResp[i].price}\n`
+        `Item ID: ${element.id} || Product Name: ${
+          element.product_name
+        } || Price: ${element.price}\n`
       );
-    }
+    });
+    console.log(
+      "........................................................................\n"
+    );
     customerQuestions();
   });
 };
@@ -73,13 +76,14 @@ const customerQuestions = () => {
         //Check if there are less in stock than customer wants
         if (answer.quantity > res[0].stock_quantity) {
           console.log(
-            `\nInsufficient quantity! There are only ${
+            `\n**Insufficient quantity! There are only ${
               res[0].stock_quantity
-            } in stock for ${res[0].product_name}\n`
+            } in stock for ${res[0].product_name}**\n`
           );
           customerQuestions();
         } else {
-          //if enough, update the customer what and how much they bought and the update the database, then display the inventory, ask questions
+          //if enough, update the customer what and how much they bought and the update the database,
+          //then display the inventory, ask questions
         }
       });
     });
