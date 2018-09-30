@@ -8,3 +8,7 @@ I populated the database with 10 different items and then created a node.js appl
 Customer View:
 
 https://github.com/thomwint/bamazon/issues/2#issue-365183218
+
+The application does not end and this includes future development ideas:
+
+Ending application once use requests, displaying the inventory if the user requests, providing better client experience with insufficient inventory.
