@@ -7,3 +7,4 @@ I populated the database with 10 different items and then created a node.js appl
 
 Customer View:
 
+https://github.com/thomwint/bamazon/issues/2#issue-365183218
